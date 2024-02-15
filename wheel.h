@@ -4,7 +4,7 @@
 #define WHEEL_H
 
 class Wheel {
-private:
+protected:
     int minValue;
     int maxValue;
 

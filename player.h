@@ -1,14 +1,13 @@
 #include "wheel.h"
 
 
-class Player {
+class Player : public Wheel{
 private:
     int money;
-    Wheel wheel;
 
 public:
     //Constructor that sets players money and the values on the wheel
-    Player(int initialMoney, int maxVal) : money(initialMoney), wheel(maxVal) {}
+    Player(int initialMoney, int maxVal) : money(initialMoney), Wheel(maxVal) {}
 
     int getMoney() const {
         return money;
@@ -19,6 +18,5 @@ public:
         money += amount;
     }
 
-    int spinWheel();
 };
 

@@ -39,7 +39,7 @@ int main() {
         std::cout << std::endl;
 
         //Player sees what the roll to decide if they want to change their bet
-        int playerResult = player.spinWheel();
+        int playerResult = player.spin();
         std::cout << "You Rolled: " << playerResult << std::endl;
 
         std::cout << "Enter your bet change (1 for double, 2 for halve, 3 for no change): ";
@@ -89,7 +89,7 @@ int main() {
             player.changeMoney(bet);
         } 
         //If the player halved their bet and their roll is higher than either of the house's they win
-        else if (playerResult > houseResult1 || playerResult > houseResult2 && betChange == 2){
+        else if (betChange == 2 && (playerResult > houseResult1 || playerResult > houseResult2)){
             std::cout << "Player wins!" << std::endl;
             player.changeMoney(bet);
         }
