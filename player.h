@@ -7,7 +7,7 @@ private:
     Wheel wheel;
 
 public:
-    Player(int initialMoney, int minVal, int maxVal) : money(initialMoney), wheel(minVal, maxVal) {}
+    Player(int initialMoney, int maxVal) : money(initialMoney), wheel(maxVal) {}
 
     int getMoney() const {
         return money;

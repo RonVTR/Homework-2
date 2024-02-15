@@ -5,11 +5,11 @@
 
 class Wheel {
 private:
-    int minValue;
+    int minValue = 1;
     int maxValue;
 
 public:
-    Wheel(int minVal = 1, int maxVal = 10) : minValue(minVal), maxValue(maxVal) {}
+    Wheel(int maxVal = 10) : maxValue(maxVal) {}
 
     int spin(); 
 };
