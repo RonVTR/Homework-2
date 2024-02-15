@@ -5,11 +5,15 @@
 
 class Wheel {
 private:
-    int minValue = 1;
+    int minValue;
     int maxValue;
 
 public:
-    Wheel(int maxVal = 10) : maxValue(maxVal) {}
+    //Default constructor that sets the min value to 1 and the max value to 10
+    Wheel() : maxValue(10), minValue(1) {}
+
+    //Constructor that sets the max value on the wheel, and the min value to 1
+    Wheel(int maxVal) : maxValue(maxVal), minValue(1) {}
 
     int spin(); 
 };
